@@ -5,7 +5,6 @@ import { Component } from "@odoo/owl";
 export class TreeHoverAction extends Component {
     async showTooltip(ev) {
         ev.stopPropagation();
-        //console.debug("Element is being hovered");
         // Retrieve the src attribute of the hovered over image
         const src = $(ev.currentTarget).attr("src");
 
@@ -19,7 +18,7 @@ export class TreeHoverAction extends Component {
         const tooltipLeft = ev.clientX + imageWidth / 2;
         const tooltipTop = ev.clientY + imageHeight / 2;
 
-    // Position the tooltip relative to the mouse pointer
+    	// Position the tooltip relative to the mouse pointer
         $tooltip.css({
             top: tooltipTop + 10,
             left: tooltipLeft + 10,
@@ -28,15 +27,15 @@ export class TreeHoverAction extends Component {
             border: "1px solid #ccc", 
             backgroundColor: "#fff", 
             padding: "5px", 
-            boxShadow: "0 0 5px rgba(0, 0, 0, 0.3)", // Add shadow for depth
+            boxShadow: "0 0 5px rgba(0, 0, 0, 0.3)", 
             visibility: "visible",
             display: "block",
             opacity: 1,
-            maxWidth: "300px" // Set maximum width (only width so every ratio can fit in)
+            maxWidth: "300px" 
         });
             
         $zoomedImage.css({
-            maxWidth: "100%", // Limit size to fit within tooltip
+            maxWidth: "100%", 
             maxHeight: "100%" 
         });
         // Remove the tooltip when mouse leaves the image
