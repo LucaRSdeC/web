@@ -1,4 +1,4 @@
-/**@odoo-module*/
+/** @odoo-module*/
 import { Component } from "@odoo/owl";
 
 
@@ -12,7 +12,7 @@ export class TreeHoverAction extends Component {
         const $tooltip = $("<div>").addClass("tooltip").appendTo("html");
         const $zoomedImage = $("<img>").attr("src", src).appendTo($tooltip);
 
-        //We are getting the image width and length and we are dividing them by half so the tooltip does not cover up the image
+        // We are getting the image width and length and we are dividing them by half so the tooltip does not cover up the image
         const imageWidth = $(ev.currentTarget).width();
         const imageHeight = $(ev.currentTarget).height();
         const tooltipLeft = ev.clientX + imageWidth / 2;
