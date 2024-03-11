@@ -49,7 +49,7 @@ export class TreeHoverAction extends Component {
 // We are finding in the document the image in the tree view that has this class
 $(document).on("mouseenter", ".o_image_cell .o_field_image img", async function(ev) {
     ev.stopPropagation();
-    //Call the function that shows the toolrip class
+    // Call the function that shows the tooltip class
     await new TreeHoverAction().showTooltip(ev);
 
 });
